@@ -1,5 +1,6 @@
 import reactLogo from '/react.svg'
 import './App.scss'
+import ReactVLibras from './components/ReactVLibras'
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         </a>
       </div>
       <h1>React</h1>
+      <ReactVLibras />
     </>
   )
 }

@@ -67,9 +67,9 @@ function ReactVLibras({ position = 'right', avatar = 'guga', opacity = 1, ...pro
   };
 
   return (
-    <div vw className="enabled" {...props}>
-        <div vw-access-button className="active"></div>
-        <div vw-plugin-wrapper>
+    <div vw="true" className="enabled" {...props}>
+        <div vw-access-button="true" className="active"></div>
+        <div vw-plugin-wrapper="true">
             <div className="vw-plugin-top-wrapper"></div>
         </div>
     </div>
