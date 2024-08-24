@@ -23,6 +23,15 @@ export default defineConfig({
     },
     target: 'esnext', // Set target to modern JavaScript
     minify: 'terser', // Use Terser for minification
+    terserOptions: {
+      compress: {
+        drop_console: true, // Remove console.logs
+        drop_debugger: true, // Remove debugger statements
+      },
+      format: {
+        comments: false, // Remove comments
+      },
+    },
     chunkSizeWarningLimit: 500, // Optional: Set chunk size warning limit (in KB)
   },
 });
