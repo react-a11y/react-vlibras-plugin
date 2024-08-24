@@ -1,7 +1,7 @@
 {
   "name": "react-vlibras-plugin",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "files": [
     "dist/react-vlibras-plugin.umd.js",
     "dist/react-vlibras-plugin.es.js"
