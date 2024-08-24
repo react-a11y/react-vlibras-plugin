@@ -2,36 +2,44 @@ import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
   build: {
     lib: {
       entry: resolve(__dirname, 'src/main-module.tsx'),
       name: 'ReactVLibras',
-      fileName: 'react-vlibras-plugin', // For ES Module, fileName should be without format
-      formats: ['es'], // Ensure that only ES module format is generated
+      fileName: 'react-vlibras-plugin',
+      formats: ['es'],
     },
     rollupOptions: {
-      external: ['react'], // Externalize peer dependencies
+      external: ['react'],
       output: {
-        // No need for globals in ES module format
         globals: {},
-        sourcemap: false, // Optional: Disable source maps if not needed
-        compact: true, // Optional: Minify the output
+        sourcemap: false,
+        compact: true,
+        inlineDynamicImports: true,
+        manualChunks: undefined,
+        preserveModules: false,
+        minifyInternalExports: true,
+      },
+      treeshake: {
+        moduleSideEffects: false,
+        tryCatchDeoptimization: false,
+        propertyReadSideEffects: false,
+        unknownGlobalSideEffects: false,
       },
     },
-    target: 'esnext', // Set target to modern JavaScript
-    minify: 'terser', // Use Terser for minification
+    target: 'esnext',
+    minify: 'terser',
     terserOptions: {
       compress: {
-        drop_console: true, // Remove console.logs
-        drop_debugger: true, // Remove debugger statements
+        dead_code: true,
+        passes: 3
       },
       format: {
-        comments: false, // Remove comments
+        comments: false,
       },
     },
-    chunkSizeWarningLimit: 500, // Optional: Set chunk size warning limit (in KB)
+    chunkSizeWarningLimit: 500,
   },
 });
