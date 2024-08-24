@@ -30,16 +30,6 @@ export default defineConfig({
       },
     },
     target: 'esnext',
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        dead_code: true,
-        passes: 3
-      },
-      format: {
-        comments: false,
-      },
-    },
     chunkSizeWarningLimit: 500,
   },
 });
