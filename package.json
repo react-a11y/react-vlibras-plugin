@@ -3,16 +3,13 @@
   "private": false,
   "version": "0.0.3",
   "files": [
-    "dist/react-vlibras-plugin.umd.js",
-    "dist/react-vlibras-plugin.es.js"
+    "dist/react-vlibras-plugin.umd.js"
   ],
   "type": "module",
   "main": "./dist/react-vlibras-plugin.umd.js",
-  "module": "./dist/react-vlibras-plugin.es.js",
   "types": "./dist/main.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/react-vlibras-plugin.es.js",
       "require": "./dist/react-vlibras-plugin.umd.js"
     }
   },
