@@ -3,7 +3,8 @@
   "private": false,
   "version": "0.0.2",
   "files": [
-    "dist"
+    "dist/react-vlibras.umd.cjs",
+    "dist/react-vlibras.js"
   ],
   "type": "module",
   "main": "./dist/react-vlibras.umd.cjs",
