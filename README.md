@@ -1,48 +1,24 @@
 # React VLibras Plugin
 
-**React VLibras Plugin** é uma biblioteca React que integra o widget de acessibilidade VLibras em suas aplicações React. O VLibras fornece tradução automática de conteúdo digital para a Língua Brasileira de Sinais (Libras), aumentando a acessibilidade para os usuários.
+**React VLibras Plugin** integra o widget de acessibilidade VLibras em aplicações React, traduzindo conteúdo para Língua Brasileira de Sinais (Libras).
 
 ## Instalação
 
-Instale a biblioteca `react-vlibras-plugin` via npm:
+Instale com npm:
 
 ```bash
 npm install react-vlibras-plugin
 ```
 
-ou com yarn:
-
-```bash
-yarn add react-vlibras-plugin
-```
-
 ## Uso
 
-Após a instalação, siga os passos abaixo para integrar o widget VLibras em sua aplicação React:
-
-### 1. Importe o Componente `ReactVLibras`
-
-No arquivo onde deseja usar o componente (por exemplo, `App.js`), importe o componente `ReactVLibras`:
+### 1. Importe o Componente
 
 ```javascript
-import React from 'react';
 import ReactVLibras from 'react-vlibras-plugin';
-
-function App() {
-  return (
-    <div>
-      <ReactVLibras />
-      {/* Outros componentes */}
-    </div>
-  );
-}
-
-export default App;
 ```
 
-### 2. Use o Componente `<ReactVLibras />`
-
-Adicione o componente `<ReactVLibras />` ao seu JSX para ativar o widget VLibras:
+### 2. Adicione o Componente ao JSX
 
 ```jsx
 <ReactVLibras />
@@ -50,35 +26,21 @@ Adicione o componente `<ReactVLibras />` ao seu JSX para ativar o widget VLibras
 
 ### Propriedades
 
-O componente aceita as seguintes propriedades:
+- **`position`**: Posição do widget (`left`, `right`, `top`, `bottom`, `bottomLeft`, `topLeft`, `bottomRight`, `topRight`). Padrão: `left`.
 
-- **`position`**: Define a posição do widget VLibras na tela. Os valores possíveis são:
-  - `left` (padrão)
-  - `right`
-  - `top`
-  - `bottom`
-  - `bottomLeft`
-  - `topLeft`
-  - `bottomRight`
-  - `topRight`
-  
   Exemplo:
   ```jsx
   <ReactVLibras position="right" />
   ```
 
-- **`avatar`**: Especifica o avatar usado no widget VLibras. As opções incluem:
-  - `icaro`
-  - `hosana`
-  - `guga`
-  - `random` (padrão)
+- **`avatar`**: Avatar do widget (`icaro`, `hosana`, `guga`, `random`). Padrão: `random`.
 
   Exemplo:
   ```jsx
   <ReactVLibras avatar="guga" />
   ```
 
-- **`opacity`**: Define a opacidade do widget VLibras. O valor deve ser um número entre `0` e `1`. O valor padrão é `1`.
+- **`opacity`**: Opacidade do widget (`0` a `1`). Padrão: `1`.
 
   Exemplo:
   ```jsx
