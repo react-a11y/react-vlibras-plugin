@@ -3,6 +3,15 @@
   "private": false,
   "version": "0.0.18",
   "type": "module",
+  "description": "A library for integrating VLibras into React applications.",
+  "author": "Lucas Ferreira <lucasferreiralimax@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/react-a11y/react-vlibras-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/react-a11y/react-vlibras-plugin/issues"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -34,5 +43,11 @@
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",
     "vite": "^5.4.1"
-  }
+  },
+  "keywords": [
+    "react",
+    "vlibras",
+    "accessibility",
+    "a11y"
+  ]
 }

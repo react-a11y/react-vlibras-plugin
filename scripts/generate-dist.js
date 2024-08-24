@@ -17,8 +17,13 @@ const pkg = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../package.json'
 const distPackageJson = {
   name: pkg.name,
   version: pkg.version,
+  author: pkg.author,
+  description: pkg.description,
+  repository: pkg.repository,
+  bugs: pkg.bugs,
   private: false,
   type: "module",
+  keywords: pkg.keywords,
   peerDependencies: {
     react: '^17.0.0 || ^18.0.0',
   },
