@@ -24,6 +24,7 @@
     "publish": "cd dist && npm pub && cd .."
   },
   "dependencies": {
+    "firebase-tools": "^13.15.4",
     "highlight.js": "^11.10.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
