@@ -3,28 +3,29 @@
   "private": false,
   "version": "0.0.12",
   "files": [
-    "dist/react-vlibras-plugin.js"
+    "./react-vlibras-plugin.js"
   ],
   "type": "module",
-  "main": "./dist/react-vlibras-plugin.js",
-  "types": "./dist/main.d.ts",
+  "main": "./react-vlibras-plugin.js",
+  "types": "./main.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/react-vlibras-plugin.js",
-      "require": "./dist/react-vlibras-plugin.js"
+      "import": "./react-vlibras-plugin.js",
+      "require": "./react-vlibras-plugin.js"
     }
   },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "build:module": "tsc -p tsconfig.module.json && mv dist/ReactVLibras.js dist/react-vlibras-plugin.js && esbuild dist/**/*.js --minify --outdir=dist --allow-overwrite",
+    "build:module": "tsc -p tsconfig.module.json && mv dist/ReactVLibras.js dist/react-vlibras-plugin.js && esbuild dist/**/*.js --minify --outdir=dist --allow-overwrite && npm run postbuild",
+    "postbuild": "node scripts/generate-dist-package-json.js",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-vlibras-plugin": "^0.0.9"
+    "react-vlibras-plugin": "^0.0.12"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
