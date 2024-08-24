@@ -26,15 +26,15 @@
   h2:first-of-type {
     margin-top: 0;
   }
-  code:last-of-type {
-    margin-bottom: 0;
+  h2, h3 {
+    margin: 2rem 0;
   }
-  code {
-    padding: 1rem;
+  .type {
     background: #fff;
     color: #000;
-    white-space: pre;
     border-radius: 8px;
+    padding: .5rem;
+    margin-right: 1rem;
   }
 }
 
