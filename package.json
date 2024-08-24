@@ -17,7 +17,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "build:module": "tsc && vite build --config vite-module.config.js",
+    "build:module": "tsc -p tsconfig.module.json && mv dist/ReactVLibras.js dist/react-vlibras-plugin.js && esbuild dist/**/*.js --minify --outdir=dist --allow-overwrite",
     "lint": "eslint .",
     "preview": "vite preview"
   },

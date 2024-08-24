@@ -1,3 +1,3 @@
-import ReactVLibras from "./components/ReactVLibras";
+import ReactVLibras from "./ReactVLibras";
 
 export default ReactVLibras;

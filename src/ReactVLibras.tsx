@@ -1,5 +1,29 @@
-import { useEffect, useRef } from 'react';
-import { containsVpOrVw, generateUniqueKeyframeName, mapPosition, ReactVLibrasProps, validationStyleSheet } from './utils';
+import { useEffect, useRef, HTMLAttributes } from 'react';
+
+type CustomProps = HTMLAttributes<HTMLDivElement> & {
+  vw?: boolean;
+};
+
+type ReactVLibrasProps = CustomProps & {
+  position?: WidgetPosition;
+  avatar?: AvatarOption;
+  opacity?: number;
+};
+
+type WidgetPosition = 'left' | 'right' | 'bottom' | 'top' | 'bottom-left' | 'top-left' | 'bottom-right' | 'top-right';
+
+const mapPosition: Record<WidgetPosition, string> = {
+  'left': 'L',
+  'right': 'R',
+  'bottom': 'B',
+  'top': 'T',
+  'bottom-left': 'BL',
+  'top-left': 'TL',
+  'bottom-right': 'BR',
+  'top-right': 'TR',
+};
+
+type AvatarOption = 'icaro' | 'hosana' | 'guga' | 'random';
 
 function ReactVLibras({ position = 'right', avatar = 'guga', opacity = 1, ...props }: ReactVLibrasProps) {
   const scriptRef = useRef<HTMLScriptElement | null>(null);
@@ -31,6 +55,22 @@ function ReactVLibras({ position = 'right', avatar = 'guga', opacity = 1, ...pro
       opacity: opacity,
     });
     observeDOMChanges();
+  };
+
+  const generateUniqueKeyframeName = (baseName: string): string => {
+    return `${baseName}-${Math.random().toString(36).substring(2, 15)}`;
+  };
+  
+  const containsVpOrVw = (selectorText: string): boolean => {
+    return /\[vp\]|\[vw\]|\.vp|\.vw|\.vpw/.test(selectorText);
+  };
+  
+  const validationStyleSheet = (node: Node): boolean => {
+    if (node.nodeName === 'STYLE' || (node.nodeName === 'LINK' && (node as HTMLLinkElement).rel === 'stylesheet')) {
+      const styleSheet = (node as HTMLStyleElement | HTMLLinkElement).sheet;
+      return styleSheet !== null && styleSheet.cssRules !== null;
+    }
+    return false;
   };
 
   const updateKeyframeNameInStyles = (oldName: string, newName: string): void => {
