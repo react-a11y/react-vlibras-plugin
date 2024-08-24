@@ -1,7 +1,7 @@
 {
   "name": "react-vlibras-plugin",
   "private": false,
-  "version": "0.0.15",
+  "version": "0.0.16",
   "type": "module",
   "scripts": {
     "dev": "vite",
