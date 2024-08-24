@@ -1,6 +1,6 @@
 import reactLogo from '/react.svg'
 import './App.scss'
-import ReactVLibras from './components/ReactVLibras'
+import ReactVLibras from 'react-vlibras-plugin';
 
 function App() {
   return (
