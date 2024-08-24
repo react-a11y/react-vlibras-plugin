@@ -2,18 +2,7 @@
   "name": "react-vlibras-plugin",
   "private": false,
   "version": "0.0.14",
-  "files": [
-    "./react-vlibras-plugin.js"
-  ],
   "type": "module",
-  "main": "./react-vlibras-plugin.js",
-  "types": "./main.d.ts",
-  "exports": {
-    ".": {
-      "import": "./react-vlibras-plugin.js",
-      "require": "./react-vlibras-plugin.js"
-    }
-  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -26,7 +15,7 @@
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-vlibras-plugin": "^0.0.13"
+    "react-vlibras-plugin": "^0.0.14"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
