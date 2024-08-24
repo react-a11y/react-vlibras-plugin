@@ -84,16 +84,3 @@ O componente aceita as seguintes propriedades:
   ```jsx
   <ReactVLibras opacity={0.8} />
   ```
-
-### Exemplo
-
-Aqui está um exemplo de como configurar o widget VLibras com propriedades personalizadas:
-
-```jsx
-<ReactVLibras 
-  position="bottomRight" 
-  avatar="hosana" 
-  opacity={0.9} />
-```
-
-Essa configuração posicionará o widget no canto inferior direito da tela, usará o avatar `hosana` e definirá a opacidade como `0.9`.

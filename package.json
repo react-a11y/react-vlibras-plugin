@@ -20,7 +20,8 @@
     "build:module": "tsc -p tsconfig.module.json && mv dist/ReactVLibras.js dist/react-vlibras-plugin.js && esbuild dist/**/*.js --minify --outdir=dist --allow-overwrite && npm run postbuild",
     "postbuild": "node scripts/generate-dist-package-json.js",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "publish": "cd dist && npm pub && cd .."
   },
   "dependencies": {
     "react": "^18.3.1",
