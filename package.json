@@ -2,10 +2,23 @@
   "name": "react-vlibras-plugin",
   "private": true,
   "version": "0.0.0",
+  "files": [
+    "dist"
+  ],
   "type": "module",
+  "main": "./dist/react-vlibras.umd.cjs",
+  "module": "./dist/react-vlibras.js",
+  "types": "./dist/main.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/react-vlibras.js",
+      "require": "./dist/react-vlibras.umd.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "build:module": "tsc && vite build --config vite-module.config.js",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -15,6 +28,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
+    "@types/node": "^22.5.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
