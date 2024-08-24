@@ -1,50 +1,99 @@
-# React + TypeScript + Vite
+# React VLibras Plugin
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**React VLibras Plugin** é uma biblioteca React que integra o widget de acessibilidade VLibras em suas aplicações React. O VLibras fornece tradução automática de conteúdo digital para a Língua Brasileira de Sinais (Libras), aumentando a acessibilidade para os usuários.
 
-Currently, two official plugins are available:
+## Instalação
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Instale a biblioteca `react-vlibras-plugin` via npm:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+npm install react-vlibras-plugin
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+ou com yarn:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+yarn add react-vlibras-plugin
 ```
+
+## Uso
+
+Após a instalação, siga os passos abaixo para integrar o widget VLibras em sua aplicação React:
+
+### 1. Importe o Componente `ReactVLibras`
+
+No arquivo onde deseja usar o componente (por exemplo, `App.js`), importe o componente `ReactVLibras`:
+
+```javascript
+import React from 'react';
+import ReactVLibras from 'react-vlibras-plugin';
+
+function App() {
+  return (
+    <div>
+      <ReactVLibras />
+      {/* Outros componentes */}
+    </div>
+  );
+}
+
+export default App;
+```
+
+### 2. Use o Componente `<ReactVLibras />`
+
+Adicione o componente `<ReactVLibras />` ao seu JSX para ativar o widget VLibras:
+
+```jsx
+<ReactVLibras />
+```
+
+### Propriedades
+
+O componente aceita as seguintes propriedades:
+
+- **`position`**: Define a posição do widget VLibras na tela. Os valores possíveis são:
+  - `left` (padrão)
+  - `right`
+  - `top`
+  - `bottom`
+  - `bottomLeft`
+  - `topLeft`
+  - `bottomRight`
+  - `topRight`
+  
+  Exemplo:
+  ```jsx
+  <ReactVLibras position="right" />
+  ```
+
+- **`avatar`**: Especifica o avatar usado no widget VLibras. As opções incluem:
+  - `icaro`
+  - `hosana`
+  - `guga`
+  - `random` (padrão)
+
+  Exemplo:
+  ```jsx
+  <ReactVLibras avatar="guga" />
+  ```
+
+- **`opacity`**: Define a opacidade do widget VLibras. O valor deve ser um número entre `0` e `1`. O valor padrão é `1`.
+
+  Exemplo:
+  ```jsx
+  <ReactVLibras opacity={0.8} />
+  ```
+
+### Exemplo
+
+Aqui está um exemplo de como configurar o widget VLibras com propriedades personalizadas:
+
+```jsx
+<ReactVLibras 
+  position="bottomRight" 
+  avatar="hosana" 
+  opacity={0.9} />
+```
+
+Essa configuração posicionará o widget no canto inferior direito da tela, usará o avatar `hosana` e definirá a opacidade como `0.9`.
