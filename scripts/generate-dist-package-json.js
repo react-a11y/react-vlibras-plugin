@@ -21,6 +21,7 @@ const distPackageJson = {
     react: '^17.0.0 || ^18.0.0',
   },
   files: pkg.files,
+  types: pkg.types,
   main: pkg.main,
   exports: pkg.exports,
 };
