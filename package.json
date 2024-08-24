@@ -9,7 +9,7 @@
     "build:module": "tsc -p tsconfig.module.json && npm run rename && npm run minify && npm run postbuild",
     "rename": "mv dist/ReactVLibras.js dist/react-vlibras-plugin.js",
     "minify": "esbuild dist/**/*.js --minify --outdir=dist --allow-overwrite ",
-    "postbuild": "node scripts/generate-dist-package-json.js",
+    "postbuild": "node scripts/generate-dist.js",
     "lint": "eslint .",
     "preview": "vite preview",
     "publish": "cd dist && npm pub && cd .."
@@ -17,7 +17,7 @@
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-vlibras-plugin": "^0.0.15"
+    "react-vlibras-plugin": "^0.0.16"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",

@@ -23,10 +23,11 @@ const distPackageJson = {
     react: '^17.0.0 || ^18.0.0',
   },
   files: [
-    'react-vlibras-plugin.js'
+    'react-vlibras-plugin.js',
+    'react-vlibras-plugin.d.ts'
   ],
   main: './react-vlibras-plugin.js',
-  types: './main.d.ts',
+  types: './react-vlibras-plugin.d.ts',
   exports: {
     ".": {
       "import": './react-vlibras-plugin.js',
@@ -49,3 +50,7 @@ console.log('Minified dist package.json generated successfully.');
 // Optionally copy README
 fs.copyFileSync(path.resolve(__dirname, '../README.md'), path.join(outputDir, 'README.md'));
 console.log('README.md copied to dist.');
+
+// Optionally copy declaration file
+fs.copyFileSync(path.resolve(__dirname, '../src/react-vlibras-plugin.d.ts'), path.join(outputDir, 'react-vlibras-plugin.d.ts'));
+console.log('react-vlibras-plugin.d.ts copied to dist.');
