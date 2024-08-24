@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "build:module": "tsc -p tsconfig.module.json && mv dist/ReactVLibras.js dist/react-vlibras-plugin.js && esbuild dist/**/*.js --minify --outdir=dist --allow-overwrite && npm run postbuild",
+    "build:module": "tsc -p tsconfig.module.json && npm run rename && npm run minify && npm run postbuild",
+    "rename": "mv dist/ReactVLibras.js dist/react-vlibras-plugin.js",
+    "minify": "esbuild dist/**/*.js --minify --outdir=dist --allow-overwrite ",
     "postbuild": "node scripts/generate-dist-package-json.js",
     "lint": "eslint .",
     "preview": "vite preview",
@@ -15,7 +17,7 @@
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-vlibras-plugin": "^0.0.14"
+    "react-vlibras-plugin": "^0.0.15"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
@@ -27,6 +29,7 @@
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.9",
     "globals": "^15.9.0",
+    "jsonminify": "^0.4.2",
     "sass-embedded": "^1.77.8",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",

@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import jsonminify from 'jsonminify';
 
 // Get the directory name
 const __filename = fileURLToPath(import.meta.url);
@@ -34,13 +35,16 @@ const distPackageJson = {
   }
 };
 
-// Write the new package.json to the dist folder
+// Minify the modified package.json
+const minifiedJson = jsonminify(JSON.stringify(distPackageJson, null, 2));
+
+// Write the minified package.json to the dist folder
 fs.writeFileSync(
   path.join(outputDir, 'package.json'),
-  JSON.stringify(distPackageJson, null, 2)
+  minifiedJson
 );
 
-console.log('Dist package.json generated successfully.');
+console.log('Minified dist package.json generated successfully.');
 
 // Optionally copy README
 fs.copyFileSync(path.resolve(__dirname, '../README.md'), path.join(outputDir, 'README.md'));
