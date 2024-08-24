@@ -1,7 +1,7 @@
 {
   "name": "react-vlibras-plugin",
   "private": false,
-  "version": "0.0.19",
+  "version": "0.1.0",
   "type": "module",
   "description": "A library for integrating VLibras into React applications.",
   "author": "Lucas Ferreira <lucasferreiralimax@gmail.com>",
