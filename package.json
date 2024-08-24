@@ -12,7 +12,7 @@
   "types": "./dist/main.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/react-vlibras-plugin.umd.js",
+      "import": "./dist/react-vlibras-plugin.es.js",
       "require": "./dist/react-vlibras-plugin.umd.js"
     }
   },
