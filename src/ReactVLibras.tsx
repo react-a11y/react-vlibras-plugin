@@ -1,10 +1,6 @@
-import { useEffect, useRef, HTMLAttributes } from 'react';
+import { useEffect, useRef } from 'react';
 
-type CustomProps = HTMLAttributes<HTMLDivElement> & {
-  vw?: boolean;
-};
-
-type ReactVLibrasProps = CustomProps & {
+type ReactVLibrasProps = {
   position?: WidgetPosition;
   avatar?: AvatarOption;
   opacity?: number;
@@ -25,7 +21,7 @@ const mapPosition: Record<WidgetPosition, string> = {
 
 type AvatarOption = 'icaro' | 'hosana' | 'guga' | 'random';
 
-function ReactVLibras({ position = 'right', avatar = 'guga', opacity = 1, ...props }: ReactVLibrasProps) {
+function ReactVLibras({ position = 'right', avatar = 'guga', opacity = 1 }: ReactVLibrasProps) {
   const scriptRef = useRef<HTMLScriptElement | null>(null);
 
   useEffect(() => {
@@ -106,14 +102,16 @@ function ReactVLibras({ position = 'right', avatar = 'guga', opacity = 1, ...pro
     observer.observe(document.head, { childList: true, subtree: true });
   };
 
-  return (
-    <div vw="true" className="enabled" {...props}>
-        <div vw-access-button="true" className="active"></div>
-        <div vw-plugin-wrapper="true">
-            <div className="vw-plugin-top-wrapper"></div>
-        </div>
+  const htmlContentVLibras = `
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
     </div>
-  );
+  `;
+
+  return <div dangerouslySetInnerHTML={{ __html: htmlContentVLibras }} />
 }
 
 export default ReactVLibras;
