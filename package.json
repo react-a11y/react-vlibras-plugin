@@ -29,7 +29,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-techs-logos": "^0.1.21",
-    "react-vlibras-plugin": "^0.1.1"
+    "react-vlibras-plugin": "^0.1.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.11.1",
