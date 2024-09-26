@@ -24,28 +24,28 @@
     "publish": "cd dist && npm pub && cd .."
   },
   "dependencies": {
-    "firebase-tools": "^13.15.4",
+    "firebase-tools": "^13.19.0",
     "highlight.js": "^11.10.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-techs-logos": "^0.1.20",
+    "react-techs-logos": "^0.1.21",
     "react-vlibras-plugin": "^0.1.1"
   },
   "devDependencies": {
-    "@eslint/js": "^9.9.0",
-    "@types/node": "^22.5.0",
-    "@types/react": "^18.3.3",
+    "@eslint/js": "^9.11.1",
+    "@types/node": "^22.7.2",
+    "@types/react": "^18.3.9",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
-    "eslint": "^9.9.0",
+    "eslint": "^9.11.1",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
-    "eslint-plugin-react-refresh": "^0.4.9",
+    "eslint-plugin-react-refresh": "^0.4.12",
     "globals": "^15.9.0",
     "jsonminify": "^0.4.2",
-    "sass-embedded": "^1.77.8",
-    "typescript": "^5.5.3",
-    "typescript-eslint": "^8.0.1",
-    "vite": "^5.4.1"
+    "sass-embedded": "^1.79.3",
+    "typescript": "^5.6.2",
+    "typescript-eslint": "^8.7.0",
+    "vite": "^5.4.8"
   },
   "keywords": [
     "react",
