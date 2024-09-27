@@ -24,7 +24,7 @@
     "publish": "cd dist && npm pub && cd .."
   },
   "dependencies": {
-    "firebase-tools": "^13.19.0",
+    "firebase-tools": "^13.20.0",
     "highlight.js": "^11.10.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.11.1",
-    "@types/node": "^22.7.2",
+    "@types/node": "^22.7.3",
     "@types/react": "^18.3.9",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
