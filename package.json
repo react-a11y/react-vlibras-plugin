@@ -44,7 +44,7 @@
     "jsonminify": "^0.4.2",
     "sass-embedded": "^1.79.4",
     "typescript": "^5.6.2",
-    "typescript-eslint": "^8.8.0",
+    "typescript-eslint": "^8.8.1",
     "vite": "^5.4.8"
   },
   "keywords": [
