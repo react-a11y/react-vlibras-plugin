@@ -1,0 +1,49 @@
+.example {
+  h2,
+  h3 {
+    color: var(--color-text);
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: var(--color-text);
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+
+  ul li {
+    list-style-type: disc;
+    margin-bottom: 5px;
+    color: var(--primary);
+    font-weight: bold;
+  }
+
+  code {
+    background-color: var(--vtl-background);
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: "Courier New", Courier, monospace;
+    color: var(--primary);
+    font-weight: bold;
+  }
+
+  pre {
+    background-color: var(--vtl-background-solid);
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-bottom: 20px;
+    border: 1px solid var(--vtl-background);
+    box-shadow: 0 0 0 1px #fff3;
+  }
+
+  pre code {
+    color: var(--primary);
+  }
+}
