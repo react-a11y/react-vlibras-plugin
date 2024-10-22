@@ -26,7 +26,7 @@ import ReactVLibras from 'react-vlibras-plugin';
 
 ### Propriedades
 
-- **`position`**: Posição do widget (`left`, `right`, `top`, `bottom`, `bottomLeft`, `topLeft`, `bottomRight`, `topRight`). Padrão: `left`.
+- **`position`**: Posição do widget (`left`, `right`, `top`, `bottom`, `bottom-left`, `top-left`, `bottom-right`, `top-right`). Padrão: `left`.
 
   Exemplo:
   ```jsx
