@@ -24,7 +24,7 @@
     "publish": "cd dist && npm pub && cd .."
   },
   "dependencies": {
-    "nucleus-react-js": "^0.0.8",
+    "nucleus-react-js": "^0.0.10",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-vlibras-plugin": "^0.1.3"
